@@ -1,0 +1,10 @@
+#!/bin/sh
+
+PROGRAM="objxt"
+SRC_FILES="main.cpp"
+OPTIMIZATION_LEVEL="-O3"
+FLAGS="-Wall"
+
+g++ -o $PROGRAM $SRC_FILES $OPTIMIZATION_LEVEL $FLAGS
+
+exit 0
