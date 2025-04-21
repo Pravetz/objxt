@@ -237,7 +237,6 @@ void extractor(const std::string &savename, const std::string &fpath, const uint
 							OBJTX_ERRLOG("Vertex textures were not found for object "<<o.first<<", filling data with 0");
 							vtx_data.push_back("0.0");
 							vtx_data.push_back("0.0");
-							vtx_data.push_back("0.0");
 						}
 					}
 					
@@ -302,7 +301,7 @@ void extractor(const std::string &savename, const std::string &fpath, const uint
 						}
 						else{
 							OBJTX_ERRLOG("Vertex textures were not found for object "<<o.first<<", filling data with 0");
-							float values[3] = {0};
+							float values[2] = {0};
 							_o_objd.write((char*)values, sizeof(values));
 						}
 					}
