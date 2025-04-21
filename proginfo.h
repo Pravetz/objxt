@@ -1,7 +1,7 @@
 #ifndef OBJXT_PROGINFO_H
 #define OBJXT_PROGINFO_H
 
-#define OBJXT_VERSION "0.1"
+#define OBJXT_VERSION "0.2"
 #define OBJXT_PROGINFO "OBJXT - Wavefront .OBJ data extractor by Volodymyr \"Pravetz\" Didur, ver " OBJXT_VERSION
 #define OBJXT_HELP(runfile) ("\nUsage:\n" + std::string(argv[0]) + " <path to .obj> <flags>\n" + \
 "Possible flags:\n" + \
