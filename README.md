@@ -20,7 +20,7 @@ Possible flags:
 OBJXT currently supports models consisting of triangles, it can parse all vertex definitions(lines starting with `v` in `.obj` files), vertex textures(`vt`), vertex normals `vn` and dump them as C++ or Python source code, or, a more "portable" binary file, which needs some careful parsing.
 
 OBJXT can be configured to dump only certain data from parsed OBJ file, depending on this, the structure of output binary(and source code as well) file will differ.
-All data has type `float`, which is typically `4 bytes`, so, each chunk of data (separated by `|`) in the table below can be parsed by reading next 4 bytes from the file 
+All data has type `float`, which is typically `4 bytes`, so, each chunk of data (separated by `|` in table) in the table below can be parsed by reading next 4 bytes from the file 
 ```
    enabled by -v    enabled by -n      enabled by -vt    enabled by -cl
 .-------------------------------------------------------------------------.
