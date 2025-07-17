@@ -20,7 +20,7 @@
 #define SRC_VTXA_DECL_START 0
 #define SRC_VTXA_DECL_END 1
 
-#define OBJTX_ERRLOG(...) std::cerr<<"! OBJTX ERROR: "<<__VA_ARGS__<<'\n'
+#define OBJXT_ERRLOG(...) std::cerr<<"! OBJXT ERROR: "<<__VA_ARGS__<<'\n'
 
 enum FLAGS : uint8_t {
 	F_C_OUTPUT = (1 << 0),
@@ -208,7 +208,7 @@ void extractor(const std::string &savename, const std::string &fpath, const uint
 							vtx_data.push_back(vertices_coords[o.second[VTX_IDX][i] * VTX_STRIDE + 2]);
 						}
 						else{
-							OBJTX_ERRLOG("Vertex coordinates were not found for object "<<o.first<<", filling data with 0");
+							OBJXT_ERRLOG("Vertex coordinates were not found for object "<<o.first<<", filling data with 0");
 							vtx_data.push_back("0.0");
 							vtx_data.push_back("0.0");
 							vtx_data.push_back("0.0");
@@ -222,7 +222,7 @@ void extractor(const std::string &savename, const std::string &fpath, const uint
 							vtx_data.push_back(vertices_nrmcoords[o.second[VNRM_IDX][i] * NRM_STRIDE + 2]);
 						}
 						else{
-							OBJTX_ERRLOG("Vertex normals were not found for object "<<o.first<<", filling data with 0");
+							OBJXT_ERRLOG("Vertex normals were not found for object "<<o.first<<", filling data with 0");
 							vtx_data.push_back("0.0");
 							vtx_data.push_back("0.0");
 							vtx_data.push_back("0.0");
@@ -234,7 +234,7 @@ void extractor(const std::string &savename, const std::string &fpath, const uint
 							vtx_data.push_back(vertices_texcoords[o.second[VTEX_IDX][i] * TXC_STRIDE + 1]);
 						}
 						else{
-							OBJTX_ERRLOG("Vertex textures were not found for object "<<o.first<<", filling data with 0");
+							OBJXT_ERRLOG("Vertex textures were not found for object "<<o.first<<", filling data with 0");
 							vtx_data.push_back("0.0");
 							vtx_data.push_back("0.0");
 						}
@@ -273,7 +273,7 @@ void extractor(const std::string &savename, const std::string &fpath, const uint
 							}
 						}
 						else{
-							OBJTX_ERRLOG("Vertex coordinates were not found for object "<<o.first<<", filling data with 0");
+							OBJXT_ERRLOG("Vertex coordinates were not found for object "<<o.first<<", filling data with 0");
 							float values[3] = {0};
 							_o_objd.write((char*)values, sizeof(values));
 						}
@@ -287,7 +287,7 @@ void extractor(const std::string &savename, const std::string &fpath, const uint
 							}
 						}
 						else{
-							OBJTX_ERRLOG("Vertex normals were not found for object "<<o.first<<", filling data with 0");
+							OBJXT_ERRLOG("Vertex normals were not found for object "<<o.first<<", filling data with 0");
 							float values[3] = {0};
 							_o_objd.write((char*)values, sizeof(values));
 						}
@@ -300,7 +300,7 @@ void extractor(const std::string &savename, const std::string &fpath, const uint
 							}
 						}
 						else{
-							OBJTX_ERRLOG("Vertex textures were not found for object "<<o.first<<", filling data with 0");
+							OBJXT_ERRLOG("Vertex textures were not found for object "<<o.first<<", filling data with 0");
 							float values[2] = {0};
 							_o_objd.write((char*)values, sizeof(values));
 						}
